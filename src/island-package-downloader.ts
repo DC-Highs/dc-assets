@@ -33,7 +33,7 @@ export class IslandPackageDownloader extends StaticFileDownloader {
             fileName = fileName!.replace(".zip", "_optim.zip")
         }
 
-        this.url = `https://www.socialpointgames.com/static/dragoncity/mobile/ui/${islandType === IslandType.HeroicRaces ? "heroicraces_islands" : "islands"}/HD/dxt5/${fileName}`
+        this.url = `https://www.socialpointgames.com/static/dragoncity/mobile/ui/${islandType === IslandType.HeroicRaces ? "heroicraces_islands" : islandType}/HD/dxt5/${fileName}`
     }
 
     async download(filePath: string) {
