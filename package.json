@@ -1,6 +1,6 @@
 {
   "name": "@dchighs/dc-assets",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Library focused on downloading static files from the Dragon City server.",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
