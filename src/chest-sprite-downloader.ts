@@ -3,7 +3,7 @@ import { ChestSpriteQuality } from "@dchighs/dc-core"
 import { StaticFileDownloader } from "./static-file-downloader"
 
 export type ChestSpriteDownloaderOptions = {
-    imageQuality: ChestSpriteQuality
+    imageQuality?: ChestSpriteQuality
     imageName: string
 }
 
@@ -17,7 +17,7 @@ export class ChestSpriteDownloader extends StaticFileDownloader {
         imageName
     }: ChestSpriteDownloaderOptions) {
         super()
-        this.imageQuality = imageQuality
+        this.imageQuality = imageQuality || ChestSpriteQuality.Default
         this.imageName = imageName
         this.url = `https://dci-static-s1.socialpointgames.com/static/dragoncity/mobile/ui/chests/ui_basic_${imageName}${imageQuality}.png`
     }

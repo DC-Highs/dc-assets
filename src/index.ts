@@ -7,6 +7,8 @@ import { MusicDownloader, MusicDownloaderOptions } from "./music-downloader"
 import { ChestSpriteDownloader, ChestSpriteDownloaderOptions } from "./chest-sprite-downloader"
 import { BuildingSpriteDownloader, BuildingSpriteDownloaderOptions } from "./building-sprite-downloader"
 import { BuildingThumbnailDownloader, BuildingThumbnailDownloaderOptions } from "./building-thumbnail-downloader"
+import { DecorationSpriteDownloader, DecorationSpriteDownloaderOptions } from "./decoration-sprite-downloader"
+import { DecorationThumbnailDownloader, DecorationThumbnailDownloaderOptions } from "./decoration-thumbnail-downloader"
 
 const dcAssets = {
     dragons: {
@@ -30,6 +32,10 @@ const dcAssets = {
         sprite: (options: BuildingSpriteDownloaderOptions) => new BuildingSpriteDownloader(options),
         thumbnail: (options: BuildingThumbnailDownloaderOptions) => new BuildingThumbnailDownloader(options)
     },
+    decorations: {
+        sprite: (options: DecorationSpriteDownloaderOptions) => new DecorationSpriteDownloader(options),
+        thumbnail: (options: DecorationThumbnailDownloaderOptions) => new DecorationThumbnailDownloader(options)
+    },
     habitats: {
         sprite: null
     }
@@ -44,5 +50,7 @@ export * from "./chest-sprite-downloader"
 export * from "./music-downloader"
 export * from "./building-sprite-downloader"
 export * from "./building-thumbnail-downloader"
+export * from "./decoration-sprite-downloader"
+export * from "./decoration-thumbnail-downloader"
 
 export default dcAssets
