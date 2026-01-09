@@ -5,6 +5,8 @@ import { DragonThumbnailDownloader, DragonThumbnailDownloaderOptions } from "./d
 import { IslandPackageDownloader, IslandPackageDownloaderOptions } from "./island-package-downloader"
 import { MusicDownloader, MusicDownloaderOptions } from "./music-downloader"
 import { ChestSpriteDownloader, ChestSpriteDownloaderOptions } from "./chest-sprite-downloader"
+import { BuildingSpriteDownloader, BuildingSpriteDownloaderOptions } from "./building-sprite-downloader"
+import { BuildingThumbnailDownloader, BuildingThumbnailDownloaderOptions } from "./building-thumbnail-downloader"
 
 const dcAssets = {
     dragons: {
@@ -23,6 +25,13 @@ const dcAssets = {
     },
     chests: {
         sprite: (options: ChestSpriteDownloaderOptions) => new ChestSpriteDownloader(options)
+    },
+    buildings: {
+        sprite: (options: BuildingSpriteDownloaderOptions) => new BuildingSpriteDownloader(options),
+        thumbnail: (options: BuildingThumbnailDownloaderOptions) => new BuildingThumbnailDownloader(options)
+    },
+    habitats: {
+        sprite: null
     }
 }
 
@@ -33,5 +42,7 @@ export * from "./dragon-sprite-downloader"
 export * from "./island-package-downloader"
 export * from "./chest-sprite-downloader"
 export * from "./music-downloader"
+export * from "./building-sprite-downloader"
+export * from "./building-thumbnail-downloader"
 
 export default dcAssets

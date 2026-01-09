@@ -33,7 +33,7 @@
     "axios": "^1.13.2"
   },
   "peerDependencies": {
-    "@dchighs/dc-core": "^0.0.3"
+    "@dchighs/dc-core": "^0.1.0"
   },
   "repository": {
     "type": "git",

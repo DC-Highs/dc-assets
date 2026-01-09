@@ -128,7 +128,7 @@ import dcAssets from "@dchighs/dc-assets"
 		keyName: "531_dc_party_planning_island"
 	})
 	
-	await musicDownloader.download("music.mp3") // Fixed extension example
+	await musicDownloader.download("music.mp3")
 })();
 ```
 
@@ -146,6 +146,40 @@ import dcAssets from "@dchighs/dc-assets"
 	})
 	
 	await chestDownloader.download("chest-sprite.png")
+})();
+```
+
+---
+
+### Downloading Building Sprites
+
+```ts
+import { BuildingSpriteQuality } from "@dchighs/dc-core"
+import dcAssets from "@dchighs/dc-assets"
+
+;(async () => {
+	const buildingSpriteDownloader = dcAssets.buildings.sprite({
+		imageName: "10552_hatchery6reskinart_building",
+		imageQuality: BuildingSpriteQuality.Normal,
+	})
+	
+	await buildingSpriteDownloader.download("building-sprite.png")
+})();
+```
+
+---
+
+### Downloading Building Thumbnails
+
+```ts
+import dcAssets from "@dchighs/dc-assets"
+
+;(async () => {
+	const buildingThumbnailDownloader = dcAssets.buildings.thumbnail({
+		imageName: "10552_hatchery6reskinart_building",
+	})
+	
+	await buildingThumbnailDownloader.download("building-thumbnail.jpg")
 })();
 ```
 

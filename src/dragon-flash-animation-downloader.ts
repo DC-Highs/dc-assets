@@ -13,7 +13,7 @@ export class DragonFlashAnimationDownloader extends StaticFileDownloader {
     readonly imageName: string
     readonly phase: number
     readonly skin?: string
-    readonly platformPrefix?: string
+    readonly platformPrefix: string
     readonly url: string
 
     constructor({
