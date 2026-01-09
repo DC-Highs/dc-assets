@@ -1,15 +1,15 @@
-import { DragonSpriteQuality } from "@dchighs/dc-core"
+import { ChestSpriteQuality } from "@dchighs/dc-core"
 
 import { StaticFileDownloader } from "./static-file-downloader"
 
 export type ChestSpriteDownloaderOptions = {
-    imageQuality: DragonSpriteQuality
+    imageQuality: ChestSpriteQuality
     imageName: string
 }
 
 export class ChestSpriteDownloader extends StaticFileDownloader {
     readonly url: string
-    readonly imageQuality: DragonSpriteQuality
+    readonly imageQuality: ChestSpriteQuality
     readonly imageName: string
     
     constructor({
