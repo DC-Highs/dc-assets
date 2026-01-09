@@ -19,7 +19,7 @@ export class ChestSpriteDownloader extends StaticFileDownloader {
         super()
         this.imageQuality = imageQuality || ChestSpriteQuality.Default
         this.imageName = imageName
-        this.url = `https://dci-static-s1.socialpointgames.com/static/dragoncity/mobile/ui/chests/ui_basic_${imageName}${imageQuality}.png`
+        this.url = `https://dci-static-s1.socialpointgames.com/static/dragoncity/mobile/ui/chests/ui_${imageName}${imageQuality}.png`
     }
     
     async download(filePath: string): Promise<string> {
