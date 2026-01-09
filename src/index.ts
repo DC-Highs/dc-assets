@@ -4,6 +4,7 @@ import { DragonSpriteDownloader, DragonSpriteDownloaderOptions } from "./dragon-
 import { DragonThumbnailDownloader, DragonThumbnailDownloaderOptions } from "./dragon-thumbnail-downloader"
 import { IslandPackageDownloader, IslandPackageDownloaderOptions } from "./island-package-downloader"
 import { MusicDownloader, MusicDownloaderOptions } from "./music-downloader"
+import { ChestSpriteDownloader, ChestSpriteDownloaderOptions } from "./chest-sprite-downloader"
 
 const dcAssets = {
     dragons: {
@@ -19,6 +20,9 @@ const dcAssets = {
     },
     sounds: {
         music: (options: MusicDownloaderOptions) => new MusicDownloader(options)
+    },
+    chests: {
+        sprite: (options: ChestSpriteDownloaderOptions) => new ChestSpriteDownloader(options)
     }
 }
 
@@ -27,6 +31,7 @@ export * from "./static-file-downloader"
 export * from "./dragon-spine-animation-downloader"
 export * from "./dragon-sprite-downloader"
 export * from "./island-package-downloader"
+export * from "./chest-sprite-downloader"
 export * from "./music-downloader"
 
 export default dcAssets
