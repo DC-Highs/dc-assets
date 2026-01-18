@@ -9,6 +9,8 @@ import { BuildingSpriteDownloader, BuildingSpriteDownloaderOptions } from "./bui
 import { BuildingThumbnailDownloader, BuildingThumbnailDownloaderOptions } from "./building-thumbnail-downloader"
 import { DecorationSpriteDownloader, DecorationSpriteDownloaderOptions } from "./decoration-sprite-downloader"
 import { DecorationThumbnailDownloader, DecorationThumbnailDownloaderOptions } from "./decoration-thumbnail-downloader"
+import { HabitatThumbnailDownloader, HabitatThumbnailDownloaderOptions } from "./habitat-thumbnail-downloader"
+import { HabitatSpriteDownloader, HabitatSpriteDownloaderOptions } from "./habitat-sprite-downloader"
 
 const dcAssets = {
     dragons: {
@@ -26,7 +28,7 @@ const dcAssets = {
         music: (options: MusicDownloaderOptions) => new MusicDownloader(options)
     },
     chests: {
-        sprite: (options: ChestSpriteDownloaderOptions) => new ChestSpriteDownloader(options)
+        sprite: (options: ChestSpriteDownloaderOptions) => new ChestSpriteDownloader(options),
     },
     buildings: {
         sprite: (options: BuildingSpriteDownloaderOptions) => new BuildingSpriteDownloader(options),
@@ -37,7 +39,8 @@ const dcAssets = {
         thumbnail: (options: DecorationThumbnailDownloaderOptions) => new DecorationThumbnailDownloader(options)
     },
     habitats: {
-        sprite: null
+        sprite: (options: HabitatSpriteDownloaderOptions) => new HabitatSpriteDownloader(options),
+        thumbnail: (options: HabitatThumbnailDownloaderOptions) => new HabitatThumbnailDownloader(options)
     }
 }
 
@@ -52,5 +55,8 @@ export * from "./building-sprite-downloader"
 export * from "./building-thumbnail-downloader"
 export * from "./decoration-sprite-downloader"
 export * from "./decoration-thumbnail-downloader"
+export * from "./dragon-thumbnail-downloader"
+export * from "./habitat-thumbnail-downloader"
+export * from "./habitat-sprite-downloader"
 
 export default dcAssets

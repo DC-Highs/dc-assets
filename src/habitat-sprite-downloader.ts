@@ -1,29 +1,29 @@
-import { DecorationSpriteQuality, StaticFileUrlPlatformPrefix } from "@dchighs/dc-core"
+import { HabitatSpriteQuality, StaticFileUrlPlatformPrefix } from "@dchighs/dc-core"
 import { StaticFileDownloader } from "./static-file-downloader"
 
-export type DecorationSpriteDownloaderOptions = {
+export type HabitatSpriteDownloaderOptions = {
     imageName: string
     platformPrefix?: StaticFileUrlPlatformPrefix
-    imageQuality?: DecorationSpriteQuality
+    imageQuality?: HabitatSpriteQuality
 }
 
-export class DecorationSpriteDownloader extends StaticFileDownloader {
+export class HabitatSpriteDownloader extends StaticFileDownloader {
     readonly url: string
     readonly imageName: string
-    readonly imageQuality: DecorationSpriteQuality
+    readonly imageQuality: HabitatSpriteQuality
     readonly platformPrefix: StaticFileUrlPlatformPrefix
     
     constructor({
         imageName,
         platformPrefix,
         imageQuality
-    }: DecorationSpriteDownloaderOptions) {
+    }: HabitatSpriteDownloaderOptions) {
         super()
 
         this.imageName = imageName
-        this.imageQuality = imageQuality || DecorationSpriteQuality.Default
+        this.imageQuality = imageQuality || HabitatSpriteQuality.Default
         this.platformPrefix = platformPrefix || StaticFileUrlPlatformPrefix.Default
-        this.url = `https://${this.platformPrefix}-static-s1.socialpointgames.com/static/dragoncity/mobile/ui/decorations/ui_${imageName}${this.imageQuality}.png`
+        this.url = `https://${this.platformPrefix}-static-s1.socialpointgames.com/static/dragoncity/mobile/ui/habitats/ui_${imageName}${this.imageQuality}.png`
     }
     
     async download(filePath: string): Promise<string> {

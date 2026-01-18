@@ -11,7 +11,8 @@
   ],
   "scripts": {
     "test": "jest",
-    "build": "tsc"
+    "build": "tsc",
+    "playground": "ts-node ./playground/index.ts"
   },
   "keywords": [
     "dragon city",
@@ -33,7 +34,7 @@
     "axios": "^1.13.2"
   },
   "peerDependencies": {
-    "@dchighs/dc-core": "^0.1.0"
+    "@dchighs/dc-core": "^0.2.0"
   },
   "repository": {
     "type": "git",
