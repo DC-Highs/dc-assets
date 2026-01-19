@@ -29,7 +29,7 @@ export class DragonThumbnailDownloader extends StaticFileDownloader {
         this.phase = phase
         this.skin = skin
         const adjustedSkin = this.skin ?? ""
-        this.url = `https://${this.platformPrefix}-static-s1.socialpointgames.com/static/dragoncity/mobile/ui/dragons/HD/thumb_${this.imageName}_${this.phase}${adjustedSkin}.png`
+        this.url = `https://${this.platformPrefix}-static-s1.socialpointgames.com/static/dragoncity/mobile/ui/dragons/HD/thumb_${this.imageName}${adjustedSkin}_${this.phase}.png`
     }
 
     async download(filePath: string) {
