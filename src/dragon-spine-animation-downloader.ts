@@ -41,7 +41,7 @@ export class DragonSpineAnimationDownloader extends StaticFileDownloader {
         if (this.useNewUrlFormat) {
             this.url = `https://${this.platformPrefix}-static-s1.socialpointgames.com/static/dragoncity/mobile/engine/version_1_1/dragons/${this.imageName}${adjustedSkin}_${this.phase}/${this.imageName}${adjustedSkin}_${this.phase}_HD_tweened_${this.textureCompressionFormat}.zip`
         } else {
-            this.url = `https://${this.platformPrefix}-static-s1.socialpointgames.com/static/dragoncity/mobile/engine/version_1_1/dragons/${this.imageName}${adjustedSkin}_${this.phase}/basic_${this.imageName}${skin}_${phase}_HD_spine-3-8-59_${this.textureCompressionFormat}.zip`
+            this.url = `https://${this.platformPrefix}-static-s1.socialpointgames.com/static/dragoncity/mobile/engine/version_1_1/dragons/${this.imageName}${adjustedSkin}_${this.phase}/basic_${this.imageName}${adjustedSkin}_${this.phase}_HD_spine-3-8-59_${this.textureCompressionFormat}.zip`
         }
     }
 
